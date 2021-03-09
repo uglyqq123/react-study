@@ -8,11 +8,13 @@ class ClsComponent extends Component{
 	}
 }
 
-const FcComponent = (props) => (
-	<div>
-		{props.name}
-	</div>
-)
+function FcComponent (props){
+	return (
+		<div>
+			{props.name}
+		</div>
+	)
+}
 
 const App  = (
 	<div>

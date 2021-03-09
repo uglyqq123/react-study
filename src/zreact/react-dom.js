@@ -11,15 +11,14 @@ function render(vnode, container) {
 }
 
 function createNode (vnode) {
-	// 虚拟dom js对象 「」
-	console.log('vnode', vnode);
+	// 虚拟dom js对象 
 	const {type} = vnode;
 	let node;
 	// 原生标签
 	if(typeof type === 'string') {
 		node = updateHostComponent(vnode);
 	} else if (typeof type === 'function') {
-		node = type.prototype?.isReactComponent ?
+		node = type.prototype.isReactComponent ?
 		updateClassComponent(vnode) :
 		updateFunctionComponent(vnode)
 	} else {
