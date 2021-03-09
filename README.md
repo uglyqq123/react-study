@@ -1,11 +1,11 @@
 # Study of React 
 关于React的实现的基本原理
 
-## 知识点
+## 基础知识
 + 什么是虚拟dom？
-React 本身只是一个 DOM 的抽象层，使用组件构建虚拟 DOM。
+    React 本身只是一个 DOM 的抽象层，使用组件构建虚拟 DOM。
 用 JavaScript 对象表示 DOM 信息和结构，当状态变更的时候，重新渲染这个 JavaScript 的对象结构。这个 JavaScript 对象称为virtual dom；DOM操作很慢，轻微的操作都可能导致页面重新排版，非常耗性能。相对于DOM对象，js对象处理起来更快，而且更简单。通过diff算法对比新旧vdom之间的差异，可以批量的、最小化的执行dom操作，从而提高性能。
-+ 什么是jsx
++ jsx?
     1. 什么是JSX
 	语法糖， React 使用 JSX 来替代常规的 JavaScript。
 	JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。
